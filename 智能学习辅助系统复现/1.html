@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能学习辅助系统</title>
+</head>
+<style>
+  #log_out{
+    text-decoration: none;
+    color: white;
+  }
+  .title{
+    /* 弹性布局 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 背景颜色 */
+    background-color: #ababab;
+    /* 整体布局 */
+    padding: 10px 20px;
+    margin: 0 100px;
+    height: 50px;
+    }
+  form{
+    /* 整体布局 */
+    padding: 10px 20px;
+    margin: 0 100px;
+    /* 弹性布局 */  
+    display: flex;
+    align-items:center;
+    /* 字体 */
+    font-size: 20px;
+    }
+  .element_left{
+    display: flex;
+    align-items: center;
+  }
+  .element_right{
+    margin-left: auto;
+  }
+</style>
+<body>
+  <div class="title">
+    <h1 style="color: white;font-family: 'KaiTi';">tlias 智能学习辅助系统</h1>
+    <a id="log_out" href="2.html">退出登录</a>
+  </div>
+  <!-- 定义一个表单 -->
+  <form action="2.html" method="post">
+    <div class="element_left">
+      姓名 &nbsp; <input type="text" name="name">
+      &nbsp;
+      &nbsp;
+      性别 &nbsp; 
+      <select name="gender">
+        <option value="" disabled selected style="display:none"></option>
+        <option value="1">男</option>
+        <option value="2">女</option>
+      </select>
+      &nbsp;
+      &nbsp;
+      职位 &nbsp; 
+      <select name="job">
+        <option value="" disabled selected style="display:none"></option>
+        <option value="1">班主任</option>
+        <option value="2">讲师</option>
+        <option value="3">学工主管</option>
+        <option value="4">教研主管</option>
+        <option value="5">咨询师</option>
+      </select>
+    </div>
+    <div class="element_right">
+      <button type="submit">查询</button>
+      <button type="reset">清空</button>
+    </div>
+  </form>
+</body>
+</html>
