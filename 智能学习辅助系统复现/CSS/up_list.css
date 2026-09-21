@@ -1,0 +1,56 @@
+form{
+  /* 整体布局 */
+  padding: 10px 20px;
+  margin: 0 250px;
+  /* 弹性布局 */  
+  display: flex;
+  align-items:center;
+  /* 字体 */
+  font-size: 25px;
+  }
+/* 表单内容左对齐 */
+.element_left{
+  display: flex;
+  align-items: center;
+}
+/* 按钮右对齐 */
+.element_right{
+  margin-left: auto;
+}
+/* 输入框样式 */
+input[type="text"]{
+  height: 20px;
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+/* 下拉框样式 */
+select[name="gender"]{
+  width: 70px;
+  height: 35px;
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+select[name="job"]{
+  width: 100px;
+  height: 35px;
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+button[type="submit"]{
+  width: 80px;
+  height: 35px;
+  background-color: #009cf4;
+  border: none;
+}
+button[type="reset"]{
+  width: 80px;
+  height: 35px;
+  background-color: #ababab;
+  border: none;
+  margin-left: 10px;
+}
