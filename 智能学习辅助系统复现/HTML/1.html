@@ -30,37 +30,38 @@
     <h1 style="color: white;font-family: 'KaiTi';">tlias 智能学习辅助系统</h1>
     <a id="log_out" href="login.html">退出登录</a>
   </div>
-  <!-- 定义一个表单 -->
-  <form action="2.html" method="post">
-    <div class="element_left">
-      姓名 &nbsp; <input type="text" name="name">
-      &nbsp;
-      &nbsp;
-      性别 &nbsp; 
-      <select name="gender">
-        <option value="" disabled selected style="display:none"></option>
-        <option value="1">男</option>
-        <option value="2">女</option>
-      </select>
-      &nbsp;
-      &nbsp;
-      职位 &nbsp; 
-      <select name="job">
-        <option value="" disabled selected style="display:none"></option>
-        <option value="1">班主任</option>
-        <option value="2">讲师</option>
-        <option value="3">学工主管</option>
-        <option value="4">教研主管</option>
-        <option value="5">咨询师</option>
-      </select>
-    </div>
-    <div class="element_right">
-      <button type="submit">查询</button>
-      <button type="reset">清空</button>
-    </div>
-  </form>
-  <!-- 定义一个表格 -->
   <div id="app">
+    {{searchForm}}
+    <!-- 定义一个表单 -->
+    <form action="2.html" method="post">
+      <div class="element_left">
+        姓名 &nbsp; <input type="text" v-model="searchForm.name" name="name">
+        &nbsp;
+        &nbsp;
+        性别 &nbsp; 
+        <select v-model="searchForm.gender" name="gender">
+          <option value="" disabled selected  style="display:none"></option>
+          <option value="1">男</option>
+          <option value="2">女</option>
+        </select>
+        &nbsp;
+        &nbsp;
+        职位 &nbsp; 
+        <select v-model="searchForm.job" name="job">
+          <option value="" disabled selected style="display:none"></option>
+          <option value="1">班主任</option>
+          <option value="2">讲师</option>
+          <option value="3">学工主管</option>
+          <option value="4">教研主管</option>
+          <option value="5">咨询师</option>
+        </select>
+      </div>
+      <div class="element_right">
+        <button type="submit" >查询</button>
+        <button type="reset">清空</button>
+      </div>
+    </form>
+    <!-- 定义一个表格 -->
     <table>
       <thead>
         <tr>
@@ -100,6 +101,11 @@
     createApp({
       data() {
         return {
+          searchForm: {
+            name: '',
+            gender: '',
+            job: ''
+          },
           empList:[
             {
               "id": 1,
