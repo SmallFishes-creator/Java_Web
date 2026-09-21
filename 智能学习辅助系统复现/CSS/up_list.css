@@ -41,7 +41,7 @@ select[name="job"]{
   border: 1px solid #ccc;
   text-align: center;
 }
-button[type="submit"]{
+button[type="button"]{
   width: 80px;
   height: 35px;
   background-color: #009cf4;

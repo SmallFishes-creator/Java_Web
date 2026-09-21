@@ -31,7 +31,6 @@
     <a id="log_out" href="login.html">退出登录</a>
   </div>
   <div id="app">
-    {{searchForm}}
     <!-- 定义一个表单 -->
     <form action="2.html" method="post">
       <div class="element_left">
@@ -57,8 +56,8 @@
         </select>
       </div>
       <div class="element_right">
-        <button type="submit" >查询</button>
-        <button type="reset">清空</button>
+        <button type="button" @click="search">查询</button>
+        <button type="button" @click="clear">清空</button>
       </div>
     </form>
     <!-- 定义一个表格 -->
@@ -95,7 +94,6 @@
       </tbody>
     </table>
   </div>
-  <script src="../JS/stop_focus.js"></script>
   <script type="module">
     import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
     createApp({
@@ -199,15 +197,21 @@
             }
           ]
         }
+      },
+      //方法
+      methods: {
+        //将搜索结果输出到控制台
+        search(){
+          console.log(this.searchForm);
+        },
+        //清空搜索框
+        clear(){
+          this.searchForm={name:'',gender:'',job:''}
+        }
       }
     }
     ).mount('#app')
   </script>
-  <script>
-    // 点击提交时弹窗提交成功窗口
-    document.querySelector('button[type="submit"]').addEventListener('click',function(){
-      alert("提交成功");
-    })
-  </script>
+  <script type="module" src="../JS/stop_focus.js"></script>
 </body>
 </html>
